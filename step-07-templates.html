@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let heroes = [
+        {
+          title: "Batman",
+          fname: "Bruce",
+          lanme: "Wayne",
+          power: 7,
+          city: "Goutham",
+        },
+        {
+          title: "Ironman",
+          fname: "BruTonyce",
+          lanme: "Stark",
+          power: 7,
+          city: "New York",
+        },
+        {
+          title: "Superman",
+          fname: "Clark",
+          lanme: "Kent",
+          power: 7,
+          city: "Metropolis",
+        },
+        {
+          title: "Spiderman",
+          fname: "Peter",
+          lanme: "Parker",
+          power: 7,
+          city: "New York",
+        },
+        {
+          title: "Phantom",
+          fname: "Kit",
+          lanme: "Walker",
+          power: 7,
+          city: "Bangala",
+        },
+      ];
+      //template engines
+      window.onload = function () {
+        for (let i = 0; i < heroes.length; i++) {
+          document.getElementsByClassName(
+            "container"
+          )[0].innerHTML += `<div class="box">
+            <h1>${heroes[i].title}</h1>
+            <h2>Full Name : <span>${heroes[i].fname+ ' ' +heroes[i].lanme}</span></h2>
+            <h3>City : <span>${heroes[i].city}</span></h3>
+            <input type="range" value="heroes[i].power" min="0" max="10">
+        </div>`;
+        }
+      };
+    </script>
+    <style>
+      .container .box {
+        float: left;
+        width: 500px;
+        height: 200px;
+        background-color: dimgrey;
+        padding: 10px;
+        margin: 5px;
+      }
+      .box h1,
+      h2,
+      h3 {
+        background-color: grey;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .box input {
+        width: 340px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

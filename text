@@ -1,0 +1,11 @@
+Array Method -ES 5
+
+forEach()
+map() - > gives anothoer Array
+filter() -> return true(included in array) or false
+every() -> every value in array should match the criteria
+some() -> some of the value in array match criteria return true
+reduce() -> reduce to single value -> start asdding from top to bottom
+reduceRight() -> reduce fron right to left
+indexOf() -> index of the value -> nothing matched return -1
+lastIndexOf() -> bottom to the top

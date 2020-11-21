@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let asynCall2 = function () {
+        let promise = new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (false) {
+              resolve("Second Async Call Response");
+            } else {
+              reject("Second Async Call Error");
+            }
+          }, 4000);
+        });
+        return promise;
+      };
+      let asynCall1 = function () {
+        let promise = new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (false) {
+              resolve("First Async Call Success");
+            } else {
+              reject("First Async Call Error");
+            }
+          }, 2000);
+        });
+        return promise;
+      };
+      asynCall1().then(
+        function (data) {
+        //   console.log(data);
+        },
+        function (error) {
+          console.log(error);
+        }
+      );
+    //   Promise.all([asynCall1(), asynCall2()]).then(
+    //     function (data) {
+    //       console.log(data[0]); // response from first ajax call
+    //       console.log(data[1]); // response from second ajax call
+    //     },
+    //     function (error) {
+    //       console.log(error);
+    //     }
+    //   );
+
+
+    Promise.race([asynCall1(), asynCall2()]).then(
+        function (data) {
+          console.log(data); // which ever aync response comes first will pick it up
+        },
+        function (error) {
+          console.log(error);
+        }
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

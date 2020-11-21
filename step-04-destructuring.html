@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let hero = {
+        title: "Ironman",
+        power: 6,
+        firstName: "Tony",
+        lastName: "Stark",
+      };
+
+      //   let commicHero = hero
+      //   console.log(commicHero.power); // 6
+      //   commicHero.power = 60
+      //   console.log(commicHero.power);//60
+      //   console.log(hero.power);//60 - > beacuse object is passed as referece
+
+      //   destructure concept below
+      //   let herotitle = hero.title;
+      //   let heropower = hero.power;
+      //   let herofistname = hero.firstName;
+      //   let herolastname = hero.lastName;
+      //   console.log(heropower); // 6
+      //   heropower = 60;
+      //   console.log(heropower); //60
+      //   console.log(hero.power); //6
+
+    //   let {
+    //     herotitle: title,
+    //     heropower: power,
+    //     herofirstname: firstName,
+    //     herolastname: lastName,
+    //   } = hero;
+
+      //   if variable are same then
+      let { title, power, firstName, lastName } = hero;
+      console.log(title, power, firstName, lastName)
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step1 Hello World</title>
+    <script>
+        //assignement which of these are efficient
+        // 1. body onload, window onload, addEventListener
+
+        // dom onload (addEventListener)-> is execution is fastest
+        // document.addEventListener("DOMContentLoaded")
+        
+      // window.onload = "init()"; hack
+      // window.onload = init;
+
+      // window.addEventListener("load", init);
+      // window.onload = function init() {
+      //     document.getElementsByTagName('h1')[0].textContent = "Hello world"
+      // }
+      document.addEventListener("DOMContentLoaded", init);
+      function init() {
+        document.getElementsByTagName("h1")[0].textContent = "Hello world";
+      }
+    </script>
+  </head>
+  <!-- <body onload="init()">
+    <h1></h1>
+    
+</body> -->
+  <body>
+    <h1></h1>
+  </body>
+</html>
+
+

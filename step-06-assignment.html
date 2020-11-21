@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+    //   let shop = {
+    //     getProductPrice: function() {
+    //       return 100;
+    //     },
+    //     getSellingPrice: function() {
+    //       let calculatedProfit = function () {
+    //         return this.getProductPrice() * 0.2;
+    //       };
+    //       return this.getProductPrice() + calculatedProfit.call(this);
+    //     //   return this.getProductPrice() + calculatedProfit.apply(this);
+    //     //   return this.getProductPrice() + calculatedProfit.bind(this)();
+    //     },
+    //   };
+    //   console.log(shop.getSellingPrice());
+
+
+
+
+
+
+
+      //js is a lexical program -> using keywork this getProductPrice & getSellingPrice siblings of parent shop -> this represent the shop
+
+
+
+
+
+      //fat arrow
+      let shop = {
+        getProductPrice: function() {
+          return 100;
+        },
+        getSellingPrice: function() {
+          let calculatedProfit = () => {
+            return this.getProductPrice() * 0.2;
+          };
+          return this.getProductPrice() + calculatedProfit();
+        },
+      };
+      console.log(shop.getSellingPrice());
+    </script>
+  </head>
+  <body></body>
+</html>

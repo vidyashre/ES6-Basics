@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Hero(hname, fname, lname){
+            this.title = hname;
+            this.firstname = fname;
+            this.lastname = lname;
+            // let power = 7;
+            // this.fullname = function(){
+            //     // return firstname+" "+lastname;
+            //     console.log("Hero's full name method")
+            // }
+        };
+        Hero.prototype.fullname = function(){
+           // console.log("Hero prototype's full name method")
+           return this.firstname+" "+this.lastname;
+        }
+        var hero1 = new Hero("Batman","Bruce", "Wayne");
+        var hero2 = new Hero("Ironman","Tony", "Stark");
+        // hero1.fullname = function(){
+        //     console.log("hero1's full name method")
+        // }
+        console.log(hero1.title, hero1.fullname());
+       // console.log(hero2.title, hero2.fullname());
+        console.log(hero1.fullname === hero2.fullname);
+
+        //generally all the properties will be on class and methods will be on prototype -> by writting adding methods in prototype will save the memory
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

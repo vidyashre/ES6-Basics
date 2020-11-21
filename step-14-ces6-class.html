@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Hero{
+           // title = 'Hero Title';
+            constructor(hname, fname, lname){
+                this.title = hname;
+                this.firstname = fname;
+                this.lastname = lname;
+                this._mission = "secret mission";
+            }
+            fullname(){
+                return this.firstname+" "+this.lastname;
+            }
+            get mission(){
+                return this._mission;
+            }
+            set mission(newmission){
+                this._mission = newmission;
+            }
+            static showPower(){
+                return 5
+            }
+        }
+        var hero1 = new Hero("Batman","Bruce", "Wayne");
+        var hero2 = new Hero("Ironman","Tony", "Stark");
+        console.log(hero1.title, hero1.fullname());
+        console.log(hero2.title, hero2.fullname());
+        console.log( hero1.mission );
+        console.log(hero1.fullname === hero2.fullname);
+        hero1.mission = "Save Gotham";
+        console.log( hero1.mission );
+        console.log( Hero.showPower() );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

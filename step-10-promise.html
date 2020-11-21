@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let ajax = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          if (true) {
+            resolve("Resolve Message : when the ajax call is success");
+          } else {
+            reject("Reject Message : when the ajax call is failed");
+          }
+        }, 2000);
+      }); // response comes or not, resolve and reject as wel  a function
+
+      // promise.then(function(data){
+      //     console.log(data);
+      // }, function(error) {
+      //     console.log("Error : ", error)
+      // })
+
+      // promise.then(function(data){
+      //     console.log(data);
+      // }).catch(function(error) {
+      //     console.log("Error : ", error)
+      // })
+
+      ajax
+        .then(function (data) {
+          console.log(" First Then", data);
+          return data + " data from first then ";
+        })
+        .then(function (data) {
+          console.log(" Second Then", data);
+          return data + " data from second then";
+        })
+        .then(function (data) {
+          console.log(" Third Then", data);
+        });
+
+
+
+
+
+        
+    </script>
+  </head>
+  <body></body>
+</html>
